@@ -1,3 +1,10 @@
-log = "file:///Users/h.ah-leung/sandbox/cloudWatch"
-ld = sc.textFile(log).cache()
-ld.filter(lambda s: 'a' in s).count()
+# spark-submit spark/tutorial.py
+from pyspark import SparkContext
+
+logFile = "file:///Users/h.ah-leung/sandbox/cloudWatch"
+sc = SparkContext("local", "first app")
+logData = sc.textFile(logFile).cache()
+numAs = logData.filter(lambda s: 'a' in s).count()
+numBs = logData.filter(lambda s: 'b' in s).count()
+
+print("Lines with a: %i, lines with b: %i" % (numAs, numBs))
