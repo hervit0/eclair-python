@@ -16,6 +16,11 @@ For this warning `UserWarning: Please install psutil to have better support with
 pip3 install psutil
 ```
 
+To reduce the logs:
+```
+sc.setLogLevel("ERROR")
+```
+
 ## Resources
 
 - [PySpark context API doc](https://spark.apache.org/docs/2.2.0/api/python/pyspark.html#pyspark.SparkContext)
