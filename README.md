@@ -21,6 +21,11 @@ To reduce the logs:
 sc.setLogLevel("ERROR")
 ```
 
+Adding libraries:
+```
+pip3 install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+```
+
 ## Resources
 
 - [PySpark context API doc](https://spark.apache.org/docs/2.2.0/api/python/pyspark.html#pyspark.SparkContext)
